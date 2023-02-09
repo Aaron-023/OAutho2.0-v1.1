@@ -1,3 +1,5 @@
+// this modules is used to write the result of the fetchAuthToken module (the bearer token) to a file for later use in a get request.
+
 import fs from 'fs'
 import { getMethod } from "../../app/config/clientCredentials.js";
 

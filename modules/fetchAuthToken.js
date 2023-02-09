@@ -1,4 +1,7 @@
-import { postMethod, postMethodHeader, postMethodBody } from '../../app/config/clientCredentials.js'
+// this fetch module is used to build/send the fetch request for the auth token. 
+
+import { postMethod, postMethodHeader, postMethodBody } from 
+'../../app/config/clientCredentials.js'
 import querystring from 'querystring'
 
 const postData = querystring.stringify({
