@@ -1,5 +1,7 @@
 # Fetching Auth Bearer Token from API
 
+(Credentials branch)
+
 These scripts written in NodeJS acquire a bearer token via an API POST request using a client secret. 
 
 ## getBearerToken.js
