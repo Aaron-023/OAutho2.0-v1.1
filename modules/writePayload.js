@@ -1,7 +1,7 @@
 // this module is used to write the payload from the GET request endpoint/target to the payload directory so it's ready for use by an external application. 
 
 import fs from 'fs'
-import { getMethod } from '../config/clientCredentials.js'
+import { getMethod } from '../../credentials_branch_app/config/clientCredentials.js'
 
 export async function writePayload(response){
 

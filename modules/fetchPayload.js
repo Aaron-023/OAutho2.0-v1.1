@@ -1,6 +1,5 @@
 // this module is used to acquire the payload from the GET request endpoint/target. 
 import fs from 'fs'
-import { getMethod } from '../config/clientCredentials.js';
 let bToken
 
 export async function fetchPayload(){
