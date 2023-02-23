@@ -1,14 +1,15 @@
-// This script utilises the modules to retrieve the bearer token from the auth endpoint, then write the contents to a json file for use in another function, getXmlData.js.
+// This index file uses the modules from fetchAuthToken and writeAuthToken.
+// It uses the processClient function to post a request to the OAuth API.
+// It uses the processAuthToken function to write the bearer token to the clientAuthToken object.
+// The clientAuthToken object is within the clientAuthTokens module.
 
-import nodecron from 'node-cron'
-import { fetchAuthToken } from '../modules/fetchAuthToken.js'
-import { writeAuthToken } from '../modules/writeAuthToken.js'
+import { processClient } from '../modules/fetchAuthToken.js'
+import { processAuthToken } from '../modules/writeAuthToken.js'
 
-async function processAuthToken() {
-  const data = await fetchAuthToken()
-  writeAuthToken(data)
+async function start(clientName) {
+  const data = await processClient(clientName)
+  processAuthToken(clientName, data)
 }
 
-// nodecron.schedule('0,30 0-23 * * 1-5', () => {
-  processAuthToken()
-// })
+// The start function argument will be refactored to use the scheduler.js index file.
+start("Burger_King")
