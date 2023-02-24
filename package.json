@@ -1,0 +1,23 @@
+{
+  "name": "credentials-branch",
+  "version": "1.0.0",
+  "description": "credentials branch, refactoring client credentials",
+  "main": "ls",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aaron-023/OAutho2.0-v1.1.git"
+  },
+  "keywords": [
+    "credentials_branch"
+  ],
+  "author": "AC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aaron-023/OAutho2.0-v1.1/issues"
+  },
+  "homepage": "https://github.com/Aaron-023/OAutho2.0-v1.1#readme"
+}
