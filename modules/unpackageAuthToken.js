@@ -3,7 +3,7 @@
 // It uses tokenData to pass the response from postRequestforAuthToken module.
 // It uses tokenData.access_token to reference the auth token value.
 
-import clientAuthTokens from "../config/clientAuthTokenLibrary.js"
+import { clientAuthTokens } from "../config/clientAuthTokenLibrary.js"
 
 export async function unpackAuthTokenFor(nameOfClient, tokenData) {
     try {
