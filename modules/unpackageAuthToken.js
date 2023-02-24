@@ -7,7 +7,7 @@ import { clientAuthTokens } from "../config/clientAuthTokenLibrary.js"
 
 export async function unpackAuthTokenFor(nameOfClient, tokenData) {
     try {
-        const openAuthToken = await tokenData.access_token
+        const openAuthToken = tokenData.access_token
         
         // the unpacked auth token is written in memory to 
         clientAuthTokens[nameOfClient] = openAuthToken
