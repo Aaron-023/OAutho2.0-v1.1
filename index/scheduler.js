@@ -8,7 +8,7 @@ import { unpackPayload_saveToDirectoryFor } from '../modules/savePayloadToDirect
 import { clientAuthTokens } from '../config/clientAuthTokenLibrary.js'
 
 // Define the cron schedule
-// nodecron.schedule('1 5-22 * * 1-5', async () => {
+const task = nodecron.schedule('0 5,10,21 * * 1-5', async () => {
   for (const record of clientCredentials) {
     
     const authToken = await getBearerTokenForClient(record.client_name)
@@ -20,4 +20,6 @@ import { clientAuthTokens } from '../config/clientAuthTokenLibrary.js'
     unpackPayload_saveToDirectoryFor(record.client_name, payload)
 
   }
-// });
+});
+
+task.start()
