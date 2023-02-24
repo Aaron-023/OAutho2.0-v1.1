@@ -1,0 +1,4 @@
+node_modules/
+credentials_branch_app/node_modules
+.DS_Store
+config/.DS_Store
